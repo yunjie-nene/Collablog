@@ -1,60 +1,60 @@
-# Final project - A personal blogging system - Charizard Coders
+# Collablog – Personal Blogging Platform
 
-This repository contains a starting point for your team's final project.
+Collablog is a full-stack university group project built with Svelte, Express, and SQLite. The platform supports user registration and login, post publishing, post browsing, likes, comments, and nested comment interactions.
 
-Your team should update this README to include the information required, as presented in the project handout available on Canvas.
+## Features
 
-## Initialising Setting
-- a. Team name : Code Charizards<br>
-- b. Are there any special setup instructions, beyond initialising the database and running your project? NO<br>
-- c. Test Account:<br>
-    <ol>
-     <li> username:<strong>test01</strong><br>
-        password:<strong>Ab123456</strong><br>
-           isAdmin:Yes<br>
-    <li>username:<strong>test02</strong><br>
-        password:<strong>Ab123456</strong><br>
-          isAdmin:Yes<br>
-    <li> username:<strong>test03</strong><br>
-        password:<strong>Ab123456</strong><br>
-          isAdmin:No<br>
-    </ol>
-- d. Any other instructions / comments you wish to make to your markers： Have fun !
+* User registration and login
+* Blog post publishing and browsing
+* Likes and comments
+* Nested comment interactions
+* Homepage post display
+* Admin and regular user roles
 
+## Tech Stack
 
-## Development Environment Setup & Commit Guidelines
+* Frontend: Svelte
+* Backend: Express / Node.js
+* Database: SQLite
+* API Testing: Postman
+* Collaboration: Git, GitHub Pull Requests, Google Sheets
 
-It is important each team member has the right development environment setup on their computer.
-Please update this with any other processes your group is following.
+## My Contributions
 
-Extensions to install:
+* Contributed mainly to backend API development and SQLite data handling.
+* Supported selected frontend features, including nested comments and masonry-style homepage display.
+* Created a Postman collection for API checking.
+* Set up a Google Sheet bug tracker before final delivery to record issues, owners, status, and fixes.
+* Helped coordinate Git workflow through branches, pull requests, and code review.
 
-- [VSCode Prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
-- [VSCode Svelete](https://marketplace.visualstudio.com/items?itemName=svelte.svelte-vscode)
-- _Add other optional extensions here :)_
+## Demo Accounts
 
-Commands to run before commits:
+Admin account:
 
-- In Backend `npm run format` to double check code is formatted
-- In Frontend `npm run format` to double check code is formatted
+* Username: `test01`
+* Password: `Ab123456`
 
-All commits MUST have a brief descriptive message
+Regular user account:
 
-## Git
+* Username: `test03`
+* Password: `Ab123456`
 
-> [!IMPORTANT]
-> It is always easier to merge files that are either new files, or files that no one else has changed. Create new modules / components to reduce the chance of Git Conflicts! However expect conflicts to occur as part of normal development.
+## Setup Notes
 
-> [!TIP]
-> The below assumes you have experience with GIT Pull requests, if not please address this.
+Initialise the database before running the project.
 
-All groups MUST use Pull Requests (PR) with at least 1 peer review for merging code into main, this is to improve code quality and to give team members an opportunity to understand your code in case they need to use it.
+Backend formatting check:
 
-If team-members don't need to use PR, then they should be working on feature branches and get latest commits in main by merging main into their feature branch (`git merge main`, or `git rebase main`).
+```bash
+npm run format
+```
 
-> [!TIP]
-> Consider a branch naming convention `feature/<some-meaningful-feature-name>`
+Frontend formatting check:
 
-Correct and **timely** execution of the PR process with evidence of good code review can contribute **significantly** to a better codebase and team member collaboration.
+```bash
+npm run format
+```
 
+## Development Notes
 
+This project was developed by a 4-person university team. We used feature branches and pull requests for collaboration, and issues found during final testing were tracked in a shared bug sheet.
