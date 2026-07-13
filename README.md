@@ -1,21 +1,28 @@
 # Collablog – Personal Blogging Platform
 
-Collablog is a full-stack university group project built with Svelte, Express, and SQLite. The platform supports user registration and login, post publishing, post browsing, likes, comments, and nested comment interactions.
+Collablog is a full-stack university group project. It consists of a Svelte web application for readers and authors, an Express/SQLite backend exposing a REST API, and a Java Swing desktop client used by administrators to manage user accounts.
+Both the web frontend and the desktop admin client consume the same REST API.
 
 ## Features
+### Web application
 
 * User registration and login
 * Blog post publishing and browsing
-* Likes and comments
-* Nested comment interactions
-* Homepage post display
-* Admin and regular user roles
+* Likes and comments, including nested comment threads
+* Masonry-style homepage post display
+
+### Admin desktop client
+
+* Admin login with session-based authentication
+* User list and user detail views
+* Delete non-admin user accounts
 
 ## Tech Stack
 
 * Frontend: Svelte
 * Backend: Express / Node.js
 * Database: SQLite
+* Desktop client: Java (Swing), Jackson
 * API Testing: Postman
 * Collaboration: Git, GitHub Pull Requests, Google Sheets
 
@@ -24,8 +31,17 @@ Collablog is a full-stack university group project built with Svelte, Express, a
 * Contributed mainly to backend API development and SQLite data handling.
 * Supported selected frontend features, including nested comments and masonry-style homepage display.
 * Created a Postman collection for API checking.
+* Contributed to the Java Swing admin desktop client as part of the team.
 * Set up a Google Sheet bug tracker before final delivery to record issues, owners, status, and fixes.
 * Helped coordinate Git workflow through branches, pull requests, and code review.
+
+## Architecture
+The Express backend exposes a REST API consumed by two separate clients:
+
+* The Svelte web app, used by regular users and authors
+* The Java Swing desktop client, used by administrators for account management
+
+The desktop client authenticates against the same login endpoint as the web app and reuses the session cookie for subsequent requests.
 
 ## Demo Accounts
 
@@ -54,6 +70,8 @@ Frontend formatting check:
 ```bash
 npm run format
 ```
+
+The desktop client is an IntelliJ project under `desktop-client/`. Dependencies are in `desktop-client/lib/`. The backend must be running on `localhost:3000` before starting the client.
 
 ## Development Notes
 
